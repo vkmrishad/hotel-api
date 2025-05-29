@@ -61,4 +61,4 @@ ENTRYPOINT ["sh", "/app/docker-entrypoint.sh"]
 EXPOSE 8000
 
 # Run the Django server ASGI
-CMD ["uv", "run", "uvicorn", "core.asgi:application", "--host", "0.0.0", "--port", "8000", "--reload"]
+CMD ["uv", "run", "uvicorn", "core.asgi:application", "--host", "0.0.0.0", "--port", "8000", "--reload"]

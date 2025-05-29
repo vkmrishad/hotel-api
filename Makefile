@@ -5,9 +5,17 @@ PROJECT_NAME = hotel-api
 
 # Targets
 
+# Help
+help:
+	@echo "Available commands:"
+	@echo "  make build           Build production Docker image"
+	@echo "  make build_dev       Build dev Docker image (with --reload)"
+	@echo "  make up              Start all services"
+	@echo "  make down            Stop all services"
+
 # Build production Docker images
 build:
-	@echo "🔵 Building production image"
+	@echo "🔵 Building image..."
 	$(COMPOSE) build
 
 # Start containers
@@ -20,19 +28,11 @@ down:
 	@echo "🔴 Stopping services..."
 	$(COMPOSE) down
 
-# Help
-help:
-	@echo "Available commands:"
-	@echo "  make build           Build production Docker image"
-	@echo "  make build_dev       Build dev Docker image (with --reload)"
-	@echo "  make up              Start all services"
-	@echo "  make down            Stop all services"
-
 
 # Aliases
+h: help 			# Show help
 b: build 			# Build production images
 u: up 				# Start containers
 d: down 			# Stop containers
-h: help 			# Show help
 
-.PHONY: build up down help
+.PHONY: help build up down

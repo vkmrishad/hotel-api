@@ -1,5 +1,9 @@
 # hotel-api
 
+![example workflow](https://github.com/vkmrishad/hotel-api/actions/workflows/lint.yaml/badge.svg?branch=main)
+![example workflow](https://github.com/vkmrishad/hotel-api/actions/workflows/test.yaml/badge.svg?branch=main)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
 Hotel management system Integrations API built with Django Rest Framework.
 
 ## Clone Project

@@ -6,6 +6,8 @@
 
 Hotel management system Integrations API built with Django Rest Framework.
 
+![Screenshot](screenshot/swagger-ui.png)
+
 ## Clone Project
 
     git clone https://github.com/vkmrishad/hotel-api.git

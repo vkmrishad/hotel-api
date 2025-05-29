@@ -35,8 +35,7 @@ Copy `.env.example` to `.env` and update the values as needed.
 
 # Format and Linting
 
-Using [Ruff](https://docs.astral.sh/ruff/) for formatting and linting. Run below command to format and lint the code.
-This is also added to pre-commit hook.
+Using [Ruff](https://docs.astral.sh/ruff/) for formatting and linting. This is added to pre-commit hook.
 
 ## Run project
 

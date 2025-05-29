@@ -6,6 +6,14 @@ class ExternalAPIException(Exception):
     pass
 
 
+class ExternalAPINotFound(ExternalAPIException):
+    """
+    Raised when a requested resource is not found in the external API.
+    """
+
+    pass
+
+
 class ExternalAPIResponseError(ExternalAPIException):
     """
     Raised when the external API returns a non-successful response.

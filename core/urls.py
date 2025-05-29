@@ -19,7 +19,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.shortcuts import redirect
-from django.urls import path
+from django.urls import include, path
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularRedocView,
@@ -27,11 +27,13 @@ from drf_spectacular.views import (
 )
 
 base_url = "api"
+integrations_base_url = f"{base_url}/integrations"
 
 urlpatterns = (
     [
-        path("", lambda request: redirect("admin:index")),  # Redirect root to admin
+        path("", lambda request: redirect("swagger-ui")),  # Redirect root to Swagger UI
         path("admin/", admin.site.urls),
+        path(f"{integrations_base_url}/pms/", include("integrations.pms.urls")),
     ]
     + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

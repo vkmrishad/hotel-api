@@ -69,6 +69,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     # Custom apps
     "integrations.base",
+    "integrations.pms",
 ]
 
 MIDDLEWARE = [
@@ -234,3 +235,6 @@ SPECTACULAR_SETTINGS = {
     # Add djangorestframework-api-key annotation
     # https://github.com/tfranzel/drf-spectacular/blob/0.25.1/docs/blueprints.rst#djangorestframework-api-key
 }
+
+# Integrations
+PMS_API_URL = env("PMS_API_URL", "https://dummy-pms.com/api")
